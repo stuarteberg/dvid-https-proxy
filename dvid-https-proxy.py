@@ -29,7 +29,7 @@ context.load_cert_chain('cert.pem', 'key.pem')
 app = Flask(__name__, static_url_path='')
 
 @app.route('/static-files/<path:path>')
-def send_js(path):
+def send_static_file(path):
     return send_from_directory('static-files', path)
 
 @app.route('/')
